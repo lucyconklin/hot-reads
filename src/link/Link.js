@@ -5,10 +5,12 @@ class Link extends Component {
 
   render () {
     console.log(this.props.title)
-    return <div className='Link'>
-      { this.props.title}
-      { this.props.url }
-    </div>
+    return <a className="link-link" href={ this.props.url }>
+      <div className='Link'>
+      <p className="link-count">{ this.props.count} </p>
+        <p className="link-url">{ this.props.url } </p>
+      </div>
+    </a>
   }
 }
 

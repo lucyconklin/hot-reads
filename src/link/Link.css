@@ -1,0 +1,33 @@
+.Link {
+  color: RGB(219, 69, 69);
+  font-family: 'Asar', serif;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 10px 20px;
+  border: 1px solid RGB(219, 69, 69);
+  margin: 10px 0;
+  background-color: white;
+}
+
+.Link:hover {
+  background-color: RGB(255, 220, 106);
+}
+
+.link-link {
+  text-decoration: none;
+}
+
+.link-link:hover {
+  text-decoration: underline;
+}
+
+.link-count {
+  display: inline-block;
+  align: right;
+  position: relative;
+  width: 40px;
+}
+
+.link-url {
+  display: inline-block;
+}
