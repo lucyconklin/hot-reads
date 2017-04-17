@@ -1,6 +1,9 @@
 {
   "name": "hot-reads",
   "version": "0.1.0",
+  "engines": {
+   "node": "7.9.0"
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
