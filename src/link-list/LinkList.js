@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import './LinkList.css';
+import React, { Component } from 'react'
+import './LinkList.css'
+import Axios from 'axios'
 
 class LinkList extends Component {
 
@@ -13,18 +14,15 @@ class LinkList extends Component {
   }
 
   retrieveLinks() {
-    var that = this;
-    fetch('https://url-lockbox.herokuapp.com/api/v1/test')
-    .then(result => result.json())
-    .then(data => {
-      that.setState({ links: data })
-      return true
+    Axios.get('http://localhost:5000/api/v1/test')
+    .then(result => {
+      this.setState({ links: result.data })
     })
   }
 
   render () {
     return <div className='LinkList'>
-      { this.state.links }
+      <h1>{ this.state.links }</h1>
     </div>
   }
 }
