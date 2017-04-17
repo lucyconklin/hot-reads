@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './LinkList.css'
 import Axios from 'axios'
+import Link from '../link/Link'
 
 class LinkList extends Component {
 
@@ -14,15 +15,20 @@ class LinkList extends Component {
   }
 
   retrieveLinks() {
-    Axios.get('https://url-lockbox.herokuapp.com/api/v1/test')
+    Axios.get('http://localhost:5000/api/v1/hot-reads')
     .then(result => {
       this.setState({ links: result.data })
     })
   }
 
+  eachLink(link){
+    console.log(this)
+    return <Link key={ link.id } title={ link.title } url={ link.url } />
+  }
+
   render () {
     return <div className='LinkList'>
-      <h1>{ this.state.links }</h1>
+      { this.state.links.map(this.eachLink) }
     </div>
   }
 }
