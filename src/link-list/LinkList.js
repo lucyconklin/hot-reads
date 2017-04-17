@@ -14,7 +14,7 @@ class LinkList extends Component {
   }
 
   retrieveLinks() {
-    Axios.get('http://localhost:5000/api/v1/test')
+    Axios.get('https://url-lockbox.herokuapp.com/api/v1/test')
     .then(result => {
       this.setState({ links: result.data })
     })
