@@ -21,13 +21,6 @@
   text-decoration: underline;
 }
 
-.link-count {
-  display: inline-block;
-  align: right;
-  position: relative;
-  width: 40px;
-}
-
 .link-url {
   display: inline-block;
 }

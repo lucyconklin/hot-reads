@@ -7,7 +7,6 @@ class Link extends Component {
     console.log(this.props.title)
     return <a className="link-link" href={ this.props.url }>
       <div className='Link'>
-      <p className="link-count">{ this.props.count} </p>
         <p className="link-url">{ this.props.url } </p>
       </div>
     </a>

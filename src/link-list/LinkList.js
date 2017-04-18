@@ -23,7 +23,7 @@ class LinkList extends Component {
 
   eachLink(link){
     console.log(link)
-    return <Link key={ link.id } url={ link.url } count={ link.read_count } />
+    return <Link key={ link.id } url={ link.url }/>
   }
 
   render () {
